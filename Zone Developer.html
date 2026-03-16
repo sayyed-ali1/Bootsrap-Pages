@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+    <title>Zone Developer</title>
+</head>
+<body>
+
+    <style>
+
+      .Navbar{background-color: #9e9e9e;}
+
+    .bottm-in.show{
+    animation: botm-In 1.5s ease forwards;
+}
+
+@keyframes botm-In{
+    from {transform:translateY(200px);
+    opacity: 0;}
+    to {transform: translateY(0px);
+    opacity: 1;}
+}
+
+.left-in.show{
+    animation: leftIn 1.5s ease forwards;
+}
+
+@keyframes leftIn{
+      from {transform: translateX(-500px);
+    opacity: 0;}
+    to { transform: translateX(0px);
+    opacity: 1;}
+}
+
+.right-in.show{
+    animation: rightIn 1.5s ease forwards;
+}
+
+@keyframes rightIn{
+    from { transform: translateX(300px);
+    opacity: 0;}
+    to { transform: translateX(0px);
+    opacity: 1;}
+}
+
+.top-in.show{
+   animation: topIn 1.5s ease forwards;
+}
+
+@keyframes topIn{
+    from { transform: translateY(-200px);
+    opacity: 0px;}
+
+ to { transform: translateY(0px);
+      opacity: 1;}
+}
+  
+.zoom-in.show{
+    animation: zoomin 2s ease forwards;
+}
+
+.focs:focus{
+box-shadow: none;
+}
+
+@keyframes zoomin{
+    from{ transform: scale(0.4);
+    opacity: 0;}
+
+    to{ transform: scale(1);
+    opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+               @media(max-width:991px){
+          
+          
+                .navbar-s{
+    color: white;
+    width: 100%;
+    background-color: #4f7726;
+}
+
+.nav-link{
+        color: white;
+        padding: 10px;
+
+    }
+    .license{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+     .license{
+            width: 100%;
+            text-align: center;
+        }
+
+        .card-box{
+            width: 100%;
+        }
+
+        .license1{
+            color: black;
+        }
+        }
+
+
+        @media(min-width:992px){
+
+
+             .navbar-s{
+    color: white;
+}
+
+.main-header{
+        background-color: #335c20;
+       
+    }
+
+    .header{
+ background-image: url(https://stza.wolfiz.org/wp-content/uploads/2025/11/Frame-1686560120-2-scaled.webp);
+ 
+}
+
+ .hero-text{
+        width: 30%;
+    }
+
+    .hero-section-text{
+        width: 70%;
+    }
+
+    .hero-img{
+        width: 350px;
+        height: 510px;
+    }
+
+    .accordion-{
+        width: 90%;
+    }
+
+    .license{
+            width: 75%;
+        }
+
+        .card-box{
+            width: 25%;
+        }
+
+        .license1{
+            color: white;
+        }
+
+        }
+        
+
+
+        
+    </style>
+    
+
+
+
+
+
+
+
+
+
+    <header>
+
+<nav class="container d-lg-flex d-none  justify-content-between mt-3 flex-wrap">
+    <ul class="nav ">
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark ">Media</a>
+        </li> 
+       
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark">Contact</a>
+        </li>
+   </ul>
+
+   <div class="d-flex gap-4 ">
+    <a href="# " class="text-dark fs-6"><i class="bi bi-facebook"></i></a>
+    <a href="# " class="text-dark fs-6"><i class="bi bi-instagram"></i></a>
+    <a href="# " class="text-dark fs-6"><i class="bi bi-twitter-x"></i></a>
+   <a href="# " class="text-dark fs-6"><i class="bi bi-linkedin"></i></a>
+   <a href="# " class="text-dark fs-6"><i class="bi bi-youtube"></i></a>
+
+    </div>
+
+</nav>
+
+<div class="container-fluid header pt-2 px-lg-3 px-0" >
+
+<nav class=" container main-header py-0 navbar navbar-expand-lg rounded-pill" >
+  <div class="container d-flex  justify-content-between px-lg-3 px-0">
+
+    <!-- Logo / Brand -->
+     <div class="navbar-brand">
+    <img class=" mx-1  py-1 d-none d-lg-block" src="https://stza.wolfiz.org/wp-content/uploads/2025/08/Group-1686558557.png">
+     <img class=" m-2 d-block d-lg-none" src="https://stza.wolfiz.org/wp-content/uploads/2025/08/STZA-Logo-1.png">
+    </div>
+   
+    <!-- Toggle Button (Mobile) -->
+    
+    <button class="navbar-toggler  border h-50 rounded-1 mt-2 me-3 " style="background-color: #999a9c;"  type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon " ></span>
+    </button>
+    
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse   navbar-s" id="mainNavbar">
+      <ul class="navbar-nav   gap-lg-5 gap-2 d-flex  navs mx-auto fs-6">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="http://127.0.0.1:5500/What%20Is%20STZA.html">What is STZA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="http://127.0.0.1:5500/Notified%20Zones.html">Notified Zones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Resource Center</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Contact Us</a>
+        </li>
+      </ul>
+      </div>
+
+      <button class="btn d-none d-lg-inline-block  border border-1 border-dark  text-bg-light my-1 py-3 rounded-pill ms-lg-3"style="width: 190px;" type="button">Apply Now</button>
+
+      </div>
+</nav>
+
+</div>
+
+
+</header>
+
+
+<div class="container-fluid pb-lg-4" style="background-image: url(https://stza.wolfiz.org/wp-content/uploads/2025/11/Frame-1686560120-2-scaled.webp);">
+
+<div class="container d-flex flex-column justify-content-center align-items-center gap- pt-lg-5 pt-5 px-0">
+    <img  class="" src="https://stza.wolfiz.org/wp-content/uploads/2025/10/Layer_1-12.png" alt="">
+    <h1 class="text-white fs-1 pt-4 top-in">ZONE DEVELOPER</h1>
+    <p class="text-white text-center fs-5 pt-lg-3 hero-text ">Transforming regions into thriving hubs of industry, trade, and technology.</p>
+</div>
+
+
+<DIV class="container d-lg-flex justify-content-between rounded-4 p-lg-5 py-5 gap-5 mt-3" 
+
+style="background: rgb(255, 255, 255,0.17);
+backdrop-filter: url(10px);">
+
+    <div class="d-flex flex-column gap-1 hero-section-text">
+        <h1 class="text-white license top-in">WHO SHOULD APPLY FOR A ZONE DEVELOPER LICENSE?</h1>
+        <p class="text-white fs-6 license">The STZA Zone Developer License is designed for public, private, or public-private entities developing, operating, or managing technology-led infrastructure that contributes to Pakistan’s innovation economy.</p>
+        <p class="text-white fs-6 license">This license is ideal for:</p>
+        <div class="d-lg-flex d-grid gap-3">
+             <div class="license d-lg-flex flex-column justify-content-start align-items-start py-4 px-4 pb-5  gap-2 rounded-4 "
+         
+         style="background: rgb(255, 255, 255,0.17);
+         backdrop-filter: blur(10px);">
+
+          <img class="img-fluid" src="https://stza.wolfiz.org/wp-content/uploads/2025/11/corporate-1-1.png" alt="">
+          <h5 class="text-white pb-2 mb-0 border-2 border-bottom border-opacity-75">Technology parks and campuses that attract multiple Zone Enterprises </h5>
+          <h6 class="text-white">that provide office or operational space to multiple tech companies, startups, or research units.</h6>
+
+         </div>
+
+         <div class="license d-lg-flex flex-column justify-content-start align-items-start py-4 px-4 pb-5  gap-2 rounded-4 "
+         
+         style="background: rgb(255, 255, 255,0.17);
+         backdrop-filter: blur(10px);">
+
+          <img class="img-fluid" src="https://stza.wolfiz.org/wp-content/uploads/2025/11/digital-transformation-1-1.png" alt="">
+          <h5 class="text-white pb-2 mb-0 border-2 border-bottom border-opacity-75">Dedicated single enterprise zones for manufacturing, assembly, or innovation </h5>
+          <h6 class="text-white">(e.g., EV production, electronics plants, data centers) </h6>
+
+         </div>
+        </div>
+    </div>
+
+    <div class="rounded-4 d-flex justify-content-center pt-lg-0 pt-3 ">
+        <img class="hero-img img-fluid" src="https://stza.wolfiz.org/wp-content/uploads/2025/10/Rectangle-212.png" alt="">
+    </div>
+</DIV>
+
+
+<div class="container  d-lg-flex justify-content-between d-grid justify-content-center align-items-center pt-4">
+    <h1 class="text-white fs-1 text-center top-in">STRATEGIC ADVANTAGES OF THE LICENSE</h1>
+   <div class="d-lg-block d-flex justify-content-center align-items-center "> <button type="button " class=" rounded-pill px-4 py-2 border-0 bg-warning align-self-start" style="width: 160px;">Explore More</button></div>
+</div>
+<div class="container ">
+<p class="text-white fs-5 ms-0  pt-3 license">Unlock sustainable demand from Pakistan’s growing technology sector, reduce capital expenditure through tax incentives, and repatriate profits with complete freedom. The STZA Zone Developer License is designed to maximize return on investment.</p>
+</div>
+
+<div class="container d-flex flex-column gap-4 justify-content-center">
+    <div class="d-lg-flex d-grid justify-content-center gap-4">
+        <div class="d-flex flex-column justify-content-start align-items-start p-4   gap-3 rounded-5 zoom-in"
+         
+         style="background: rgb(255, 255, 255,0.10);
+         backdrop-filter: blur(10px);">
+
+          <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/taxes-1.png" alt="">
+          <h5 class="text-white pb-2 mb-2 ">10-year exemptions on all income taxes, custom duties on capital goods, and more.</h5>
+          
+         <button type="button " class=" rounded-pill px-4 py-2 border-0 bg-white">See Full Incentives</button>
+
+         </div>
+
+          <div class="d-flex flex-column justify-content-start align-items-start p-4 gap-3 rounded-5 zoom-in"
+         
+         style="background: rgb(255, 255, 255,0.10);
+         backdrop-filter: blur(10px);">
+
+          <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/exchange-1.png" alt="">
+          <h5 class="text-white pb-2 mb-0 ">Restriction-free capital flow through Exclusive Special Forex Accounts</h5>
+          
+         </div>
+
+          <div class="d-flex flex-column justify-content-start align-items-start p-4  gap-3 rounded-5 zoom-in"
+         
+         style="background: rgb(255, 255, 255,0.10);
+         backdrop-filter: blur(10px);">
+
+          <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/interest-rate-1.png" alt="">
+          <h5 class="text-white pb-2 mb-0 ">Fully repatriable profits and dividends (subject to local taxes)</h5>
+          
+        
+         </div>
+    </div>
+
+
+     <div class="d-lg-flex d-grid justify-content-center gap-4">
+        <div class="d-flex flex-column justify-content-start align-items-start p-4  gap-3 rounded-5 zoom-in "
+         
+         style="background: rgb(255, 255, 255,0.10);
+         backdrop-filter: blur(10px);">
+
+          <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/Group-2.png" alt="">
+          <h5 class="text-white pb-2 mb-2 ">100% business ownership for foreign and local investors</h5>
+          
+         
+         </div>
+
+          <div class="d-flex flex-column justify-content-start align-items-start p-4   gap-3 rounded-5 zoom-in"
+         
+         style="background: rgb(255, 255, 255,0.10);
+         backdrop-filter: blur(10px);">
+
+          <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/demand-1.png" alt="">
+          <h5 class="text-white pb-2 mb-0 ">Increased demand from the Technology Sector due to Special Technology Zone status</h5>
+          
+         </div>
+
+          <div class="d-flex flex-column justify-content-start align-items-start p-4   gap-3 rounded-5 zoom-in"
+         
+         style="background: rgb(255, 255, 255,0.10);
+         backdrop-filter: blur(10px);">
+
+          <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/digital-1.png" alt="">
+          <h5 class="text-white pb-2 mb-0 ">Digitized licensing through the STZA One Window Portal</h5>
+          
+        
+         </div>
+    </div>
+
+
+</div>
+
+<div class="container bottm-in">
+        <h1 class="fs-1  py-4 ps-4 d-lg-inline-block text-white license" >CATEGORIES FOR DEVELOPMENT OF ZONES</h1>
+       </div>
+
+<div class="container pb-5 px-lg-0 px-0">
+   
+
+         <div class="container d-lg-flex d-grid gap-3 justify-content-between py-2 px-lg-0 px-0">
+
+     <div class="d-flex flex-column rounded-5 py-4 px-lg-3 zoom-in" style="background-color: #4f7726;">
+        <h1 class="text-white fs-4 px-3 license">INFORMATION <br>TECHNOLOGIES & <br>COMPUTING</h1>
+
+        <ol class="list-group list-group-numbered pt-5 border-0 fs-5">
+            <li class="list-group-item text-white " style="background-color: #4f7726; border: none; ">Information Technology (IT)/ITeS</li>
+             <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Data Center & Cloud Computing</li>
+              <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Big Data Analytics</li>
+               <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Cybersecurity</li>
+                <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">E-commerce</li>
+                 <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Business Process Outsourcing (BPO)S</li>
+                 <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Quantum Computing</li>
+                  <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Robo Advisory</li>
+                      <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Telemedicine</li>       
+        </ol>
+     </div>
+
+
+     <div class="d-flex flex-column rounded-5 py-4 px-3 zoom-in" style="background-color: #4f7726;">
+        <h1 class="text-white fs-4 px-3 license">HI-TECH / ADVANCED <br>PRODUCTION</h1>
+
+        <ol class="list-group list-group-numbered pt-2 border-0 fs-5">
+            <li class="list-group-item text-white " style="background-color: #4f7726; border: none; ">Information Technology (IT)/ITeS</li>
+             <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Data Center & Cloud Computing</li>
+              <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Big Data Analytics</li>
+               <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Cybersecurity</li>
+                <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">E-commerce</li>
+                 <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Business Process Outsourcing (BPO)S</li>
+                 <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Quantum Computing</li>
+                  <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Robo Advisory</li>
+                      <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Telemedicine</li> 
+                       <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Electronics</li>
+                        <!-- <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Telemeda Envirotech/Greentech/ Cleantech/ <br>Renewable Energyiciney</li>      -->
+        </ol>
+     </div>
+
+     <div class="d-flex flex-column rounded-5 py-4  px-4 zoom-in" style="background-color: #4f7726;">
+        <h1 class="text-white fs-4 px-3 license">Emerging <br> Technologies</h1>
+
+        <ol class="list-group list-group-numbered pt-5 border-0 fs-5">
+            <li class="list-group-item text-white " style="background-color: #4f7726; border: none; ">Information Technology (IT)/ITeS</li>
+             <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Data Center & Cloud Computing</li>
+              <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Big Data Analytics</li>
+               <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Cybersecurity</li>
+                <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">E-commerce</li>
+                 <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Business Process Outsourcing (BPO)S</li>
+                 <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Quantum Computing</li>
+                  <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Robo Advisory</li>
+                      <li class="list-group-item text-white"style="background-color: #4f7726; border: none; ">Telemedicine</li>       
+        </ol>
+     </div>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<div class="d-lg-flex container gap-5 pt-4 ">
+    <div class="d-flex container flex-column justify-content-center gap-2">
+        <h1 class="license bottm-in" style="color: #4f7726; ">GET YOUR LICENSE DIGITALLY IN 4-EASY STEPS</h1>
+        <p class="text-dark fs-5 license">A step by step guide on the process to avail your license for STZA as a Zone Developer in 4 Easy Steps.</p>
+       <div class="d-lg-block d-flex justify-content-center align-items-center"> <button class="btn license  text-bg-warning my-1 py-2 rounded-pill  "style="width: 160px;" type="button">Apply Now</button></div>
+
+    </div>
+
+    <div class="d-flex flex-column gap-2">
+        
+        <div class="d-lg-flex d-grid flex-column gap-2 pt-4 right-in">
+        <div class="d-lg-block d-flex justify-content-center">
+        <button class="rounded-pill text-white px-3 py-2 border-0 fs-5 " style="background-color: #526d17;" >1</button>
+        </div>
+        <h2 class="pb-0 license" style="color: #084236; "> Prepare Your Documents</h2>
+        <p class="fs-5 license">Zone Enterprises are assessed on contributions such as R&D, job creation, human capital development, technology transfer, exports, and innovation.
+Applicants must provide supporting documentation for claims made.</p>
+</div>
+
+ <div class="d-flex flex-column gap-2 right-in">
+        <div class="d-lg-block d-flex justify-content-center">
+        <button class="rounded-pill text-white px-3 py-2 border-0 fs-5" style="background-color: #526d17;" >2</button>
+        </div>
+        <h2 class="pb-0 license" style="color: #084236; "> Submit Application Digitally</h2>
+        <p class="fs-5 license">Apply digitally through the STZA One Window Portal and upload all required documents online.</p>
+</div>
+
+ <div class="d-flex flex-column gap-2 right-in">
+        <div class="d-lg-block d-flex justify-content-center">
+        <button class="rounded-pill text-white px-3 py-2 border-0 fs-5" style="background-color: #526d17;" >3</button>
+        </div>
+        <h2 class="pb-0 license" style="color: #084236; "> Review & Evaluation</h2>
+        <p class="fs-5 license">STZA reviews applications for compliance and alignment with sectoral priorities.</p>
+</div>
+
+ <div class="d-flex flex-column gap-2 right-in">
+        <div class="d-lg-block d-flex justify-content-center">
+        <button class="rounded-pill text-white px-3 py-2 border-0 fs-5" style="background-color: #526d17;" >4</button>
+        </div >
+        <h2 class="pb-0 license" style="color: #084236; "> License Issuance</h2>
+        <p class="fs-5 license">Successful applicants receive the Zone Enterprise License - enabling access to incentives and ecosystem access.</p>
+</div>
+
+    </div>
+</div>
+ 
+
+
+
+
+
+
+<div class="container d-lg-flex justify-content-between px-5 py-4">
+    <h2 class="text-dark license ">Developer Showcase</h2>
+  <div class="d-lg-block d-flex justify-content-center ">  <button class="text-bg-warning rounded-pill border-0 px-4 py-2">Explore Lisenced Zones</button></div>
+     </div>
+
+   
+   
+   
+         
+        <div class="container-fluid" style="background-image: url(https://stza.wolfiz.org/wp-content/uploads/2025/11/Frame-1686560152-2.webp); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+        
+        
+         <div class="container  carousel slide pt-lg-5 " id="mycarousel">
+        <div class="carousel-inner ">
+            
+            <!--slide 1-->
+            <div class=" carousel-item active">
+                <div class="d-flex justify-content-center  gap-4">
+        <div class="py-2 px-4   card-box  rounded-4 " style="background: rgb(255, 255, 255,0.17);
+        backdrop-filter: blur(10px);">
+              <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/Rectangle-139-6.png" alt="" style="width: 220px; height: 220px;">
+              <div>
+                <h3 class=" fs-3 pt-3 text-white">NUST - NUST STZ</h3>
+                <p class="fs-5 text-white">Building advanced research-driven technology zones to foster academia-industry collaboration</p>
+              </div>
+        </div>
+
+        <div class=" py-2 px-4 card-box  rounded-4" style="background: rgb(255, 255, 255,0.17);
+        backdrop-filter: blur(10px);">
+              <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/Rectangle-139-7.png" alt="" style="width: 220px; height: 220px;">
+              <div>
+                <h3 class=" fs-3 pt-3 text-white">CBD - NSIT</h3>
+                <p class="fs-5 text-white">Developing state-of-the-art IT campuses that host multi-tenant innovation enterprises.</p>
+              </div>
+        </div>
+
+        <div class="py-2 px-4   card-box  rounded-4" style="background: rgb(255, 255, 255,0.17);
+        backdrop-filter: blur(10px);">
+              <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/Rectangle-139-9.png" alt="" style="width: 220px; height: 220px;">
+              <div>
+                <h3 class=" fs-3 pt-3 text-white">Aviation City - NASTP</h3>
+                <p class="fs-5 text-white">Establishing aerospace and national science technology parks to drive R&D and startups.</p>
+              </div>
+        </div>
+
+        <div class="py-2 px-4   card-box  rounded-4"  style="background: rgb(255, 255, 255,0.17);
+        backdrop-filter: blur(10px);">
+              <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/Rectangle-139-8.png" alt="" style="width: 220px; height: 220px;">
+              <div>
+                <h3 class=" fs-3 pt-3 text-white">J7 Group - Tech7 STZ</h3>
+                <p class="fs-5 text-white">Creating Islamabad’s first smart innovation hub with integrated infrastructure.</p>
+              </div>
+        </div>
+        </div>
+        </div>
+        
+
+        <!--slide 2-->
+        <div class=" carousel-item ">
+            <div class="d-flex gap-4">
+        <div  class=" py-2 px-4  card-box  rounded-4" style="background: rgb(255, 255, 255,0.17);
+        backdrop-filter: blur(10px);">
+              <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/Rectangle-139-8.png" alt="" style="width: 220px; height: 220px;">
+              <div>
+                <h3 class=" fs-3 pt-3 text-white">J7 Group - Tech7 STZ</h3>
+                <p class="fs-5 text-white">Creating Islamabad’s first smart innovation hub with integrated infrastructure.</p>
+              </div>
+        </div>
+
+        <div  class="py-2 px-4  card-box rounded-4 " style="background: rgb(255, 255, 255,0.17);
+        backdrop-filter: blur(10px);">
+              <img src="https://stza.wolfiz.org/wp-content/uploads/2025/11/Rectangle-139-8.png" alt="" style="width: 220px; height: 220px;">
+              <div>
+                <h3 class=" fs-3 pt-3 text-white">J7 Group - Tech7 STZ</h3>
+                <p class="fs-5 text-white">Creating Islamabad’s first smart innovation hub with integrated infrastructure.</p>
+              </div>
+        </div>
+
+        </div>
+        </div>
+
+        </div>
+     
+          <button class="carousel-control-prev  bg-dark align-self-center" style="width: 40px;" data-bs-target="#mycarousel" data-bs-slide="prev" >
+            <span class=" carousel-control-prev-icon" ></span>
+          </button>
+         <button class="carousel-control-next bg-dark align-self-center" style="width: 40px;" data-bs-target="#mycarousel" >
+            <span class="carousel-control-next-icon"></span>
+         </button>
+        
+        </div>
+        
+            <div class="container d-lg-flex justify-content-between gap-5 py-lg-5  mt-lg-5">
+            <div class="d-flex flex-column gap-2 justify-content-center">
+                <h2 class="fs-3  license license1 top-in">Frequently Asked Questions</h2>
+                <p class="fs-5  license license1">Here are some frequently asked questions about our mandate, incentives, and how to join Pakistan’s growing technology ecosystem. </p>
+               <div class="d-lg-block d-flex justify-content-center"> <button class="fs-6 px-5 py-2 rounded-pill border-0 text-dark text-bg-warning align-self-start ">View all FAQ’s</button></div>
+               
+            </div>
+             
+
+            <div class="d-flex flex-column gap-2 accordion- pt-4">
+
+           
+            <div class="accordion " id="myAccordion">
+               
+               <div class="accordion-item  "  style="background: rgb(255, 255, 255,0.17);
+                backdrop-filter: blur(10px);">
+                <h2 class="accordion-header" >
+                    <button class="accordion-button  border-0  focs" data-bs-toggle="collapse" data-bs-target="#collapseone"  
+                    
+                   style="background: rgb(255, 255, 255,0.17);
+                backdrop-filter: blur(10px);" >
+
+                        <h4 class="text-dark">What is a Zone Enterprise?</h4>
+                    </button>
+                </h2>
+                <div id="collapseone" class=" collapse" data-bs-parent="#myAccordion">
+                  
+                    <div class=" text-white p-4 " 
+                     >
+
+                    The term refers to any public, private, or public-private Person developing, operating and managing a technological enterprise within STZ and licensed as such by the Authority. A Zone Enterprise may develop and/or operate its facility or physical infrastructure for its own use; however, it cannot sublease or rent-out the facility to another Zone Enterprise. A Zone Enterprise may also apply for office space in a STZ.
+                 </div>
+                </div>
+                </div>
+
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingtwo">
+                    <button class="accordion-button collapsed border-0 " data-bs-toggle="collapse" data-bs-target="#collapsetwo"  
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                backdrop-filter: blur(10px);">
+
+                        <h4 class="text-white">What is a Zone Enterprise?</h4>
+                    </button>
+                </h2>
+                <div id="collapsetwo" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                  
+                    <div class=" text-white p-4 accordion-body" 
+                     style="background: rgb(255, 255, 255,0.17);
+                backdrop-filter: blur(10px);">
+
+                    The term refers to any public, private, or public-private Person developing, operating and managing a technological enterprise within STZ and licensed as such by the Authority. A Zone Enterprise may develop and/or operate its facility or physical infrastructure for its own use; however, it cannot sublease or rent-out the facility to another Zone Enterprise. A Zone Enterprise may also apply for office space in a STZ.
+                 </div>
+                </div>
+                </div>
+
+
+                <div class="accordion-item">
+                <h2 class="accordion-header"  id="headingThree">
+                    <button class="accordion-button collapsed border-0 " data-bs-toggle="collapse" data-bs-target="#collapsethree"  
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                backdrop-filter: blur(10px);">
+
+                        <h4 class="text-white">What is a Zone Enterprise?</h4>
+                    </button>
+                </h2>
+                <div id="collapsethree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                  
+                    <div class=" text-white p-4 accordion-body" 
+                     style="background: rgb(255, 255, 255,0.17);
+                backdrop-filter: blur(10px);">
+
+                    The term refers to any public, private, or public-private Person developing, operating and managing a technological enterprise within STZ and licensed as such by the Authority. A Zone Enterprise may develop and/or operate its facility or physical infrastructure for its own use; however, it cannot sublease or rent-out the facility to another Zone Enterprise. A Zone Enterprise may also apply for office space in a STZ.
+                 </div>
+                </div>
+                </div>
+
+
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingfour">
+                    <button class="accordion-button collapsed border-0 " data-bs-toggle="collapse" data-bs-target="#collapsefour"  
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                backdrop-filter: blur(10px);">
+
+                        <h4 class="text-white">What is a Zone Enterprise?</h4>
+                    </button>
+                </h2>
+                <div id="collapsefour" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                  
+                    <div class=" text-white p-4 accordion-body" 
+                     style="background: rgb(255, 255, 255,0.17);
+                backdrop-filter: blur(10px);">
+
+                    The term refers to any public, private, or public-private Person developing, operating and managing a technological enterprise within STZ and licensed as such by the Authority. A Zone Enterprise may develop and/or operate its facility or physical infrastructure for its own use; however, it cannot sublease or rent-out the facility to another Zone Enterprise. A Zone Enterprise may also apply for office space in a STZ.
+                 </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- <div class="accordion " id="myAccordion">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed border-0" data-bs-toggle="collapse" data-bs-target="#collapsetwo"
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                    backdrop-filter: blur(10px);">
+
+                        <h4 class="text-white">What are the criteria to be selected as a Zone Enterprise?</h4>
+                    </button>
+                </h2>
+
+                <div id="collapsetwo" class="collapse" data-bs-parrent="myAccordion">
+
+                    <p class="text-white p-4"
+                     style="background: rgb(255, 255, 255,0.17);
+                    backdrop-filter: blur(10px);">
+                        Zone Enterprises will be evaluated based on their contributions to Pakistan’s technology sector, with factors such as R&D, local job creation, technology transfer, human capital development, exports growth, import substitution, technology development and other relevant areas. For a more detailed framework, please refer to following documents available on official website:
+STZA (Qualification and Approval) Rules, 2021.
+Application Guidelines for Zone Enterprises.
+                    </p>
+                </div>
+            </div> -->
+
+
+            <!-- <div class="accordion " id="myAccordion">
+
+                <div class="accordion-header">
+                    <button class="accordion-button collapsed border-0" data-bs-toggle="collapse" data-bs-target="#collapsethree"
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                        backdrop-filter: blur(10px);">
+
+                        <h4 class="text-white">What documents will you need to apply for a Zone Enterprise License?</h4> 
+                    </button>
+
+                </div>
+                <div id="collapsethree" class="collapse" data-bs-parrent="myAccordion">
+
+                    <p class="text-white p-4"
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                    backdrop-filter: blur(10px);">
+
+                        Interested Zone Enterprises will be required to submit an application, along with supporting documentation, which are detailed in the Application Guidelines for Zone Enterprises.
+                    </p>
+                </div>
+
+            </div> -->
+
+
+<!-- 
+             <div class="accordion " id="myAccordion">
+
+                <div class="accordion-header">
+                    <button class="accordion-button collapsed border-0" data-bs-toggle="collapse" data-bs-target="#collapsefour"
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                        backdrop-filter: blur(10px);">
+
+                        <h4 class="text-white">What documents will you need to apply for a Zone Enterprise License?</h4> 
+                    </button>
+
+                </div>
+                <div id="collapsefour" class=" collapse" data-bs-parrent="myAccordion">
+
+                    <p class="text-white p-4"
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                    backdrop-filter: blur(10px);">
+
+                        Interested Zone Enterprises will be required to submit an application, along with supporting documentation, which are detailed in the Application Guidelines for Zone Enterprises.
+                    </p>
+                </div>
+
+            </div> -->
+
+
+             <!-- <div class="accordion " id="myAccordion">
+
+                <div class="accordion-header">
+                    <button class="accordion-button border-0" data-bs-toggle="collapse" data-bs-target="#collapsefive"
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                        backdrop-filter: blur(10px);">
+
+                        <h4 class="text-white">What documents will you need to apply for a Zone Enterprise License?</h4> 
+                    </button>
+
+                </div>
+                <div id="collapsefive" class="collapse" data-bs-parrent="myAccordion">
+
+                    <p class="text-white p-4"
+                    
+                    style="background: rgb(255, 255, 255,0.17);
+                    backdrop-filter: blur(10px);">
+
+                        Interested Zone Enterprises will be required to submit an application, along with supporting documentation, which are detailed in the Application Guidelines for Zone Enterprises.
+                    </p>
+                </div>
+
+            </div> -->
+
+
+             </div>
+        </div>
+
+        <div class="d-flex flex-column gap-3 align-items-center pt-4 pb-lg-5 pb-4">
+            <h1 class="text-white fs-1  text-center  license top-in">PREPARE YOUR APPLICATION THROUGH OUR DETAILED GUIDELINES</h1>
+            <button class="px-lg-5  px-3 py-2 py-lg-3 text-dark text-bg-warning rounded-pill border-0">View ZD Application Guidelines</button>
+        </div>
+        </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <footer>
+
+
+
+<div class="container-fluid   pb-5" style="background-color: #313131;">
+
+    <div class="container d-lg-flex d-grid justify-content-center gap-4">
+       
+<div class="d-flex flex-column ">
+
+    <div class="d-flex pt-5 gap-3 ">
+         <img class=" " style="height: 170px; width: 170px; object-fit: contain;" src="https://stza.wolfiz.org/wp-content/uploads/2025/08/Frame-1686560190.png" alt="">
+         <img class=" " style="height: 170px; width: 170px; object-fit: contain;" src="https://stza.wolfiz.org/wp-content/uploads/2025/08/Frame-1686560189.png" alt="">
+    
+        </div>
+          
+    <div class="d-flex gap-3  justify-content-center pt-5">
+    <a href="# " class="text-dark fs-6 bg-white rounded-pill p-1 px-2"><i class="bi bi-facebook"></i></a>
+    <a href="# " class="text-dark fs-6 bg-white rounded-pill p-1 px-2"><i class="bi bi-instagram"></i></a>
+    <a href="# " class="text-dark fs-6 bg-white  rounded-pill p-1 px-2"><i class="bi bi-twitter-x"></i></a>
+   <a href="# " class="text-dark fs-6 bg-white  rounded-pill p-1 px-2"><i class="bi bi-linkedin"></i></a>
+   <a href="# " class="text-dark fs-6 bg-white  rounded-pill p-1 px-2"><i class="bi bi-youtube"></i></a>
+
+    </div>
+
+</div>
+
+<div class="d-flex justify-content-between ">
+<div class="d-flex flex-column w-50">
+
+    <h2 class=" pt-5" style="color: #d5fe00;">PAGES</h2>
+    <ul class="list-group  ">
+        <li class="list-group-item  text-white  p-0 pt-2" style="border: none; background-color: #313131;">Home</li>
+         <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Resources</li>
+          <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Notified Zones</li>
+         <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Media</li>
+          <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Careers</li>
+         <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Contact Us</li>
+        
+    </ul>
+</div>
+
+
+    <div class="d-flex flex-column pt-5 mt-5 ps-5">
+    <ul class="list-group ">
+        <li class="list-group-item text-white p-0  pt-2" style="border: none; background-color: #313131;">Leadership</li>
+         <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Zone Enterprise</li>
+         <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Zone Developer</li>
+          <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Licenses</li>
+         <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Procurement</li>
+          <li class="list-group-item  text-white p-0 pt-2" style="border: none; background-color: #313131;">Strategic Alliance & Partnerships</li>
+        
+    </ul>
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="d-flex flex-column w-50">
+
+    <div class="d-lg-flex d-grid gap-3 justify-content-between">
+      
+        
+        <div class="d-flex flex-column ps">
+        <h2 class=" pt-lg-5 e" style="color: #d5fe00;">CONTACT</h2>
+        <a href="mailto:info@stza.gov.pk " class="pt-2" style="text-decoration: none; color: white;">info@stza.gov.pk</a>
+          <a href="tel:92-51-111-STZ-PAK  " class="pt-2" style="text-decoration: none; color: white;">92-51-111-STZ-PAK</a>
+        <a href="tel:92-51-111-STZ-PAK "class="pt-2" style="text-decoration: none; color: white;">92-51-917-5000</a>
+        </div>
+        
+
+        <div class="">
+            <h2 class=" pt-lg-5 " style="color: #d5fe00;">ADDRESS</h2>
+             <a href="#"  style="text-decoration: none; color: white;">New State Life Tower Plot#61,<br> 16th Floor F-7/4, Islamabad</a>
+        </div>
+
+         </div>
+       
+
+        <div class="d-flex flex-column">
+            <h3 class=" pt-3 " style="color: #d5fe00;">SIGN UP AND UPDATE</h3>
+            <h6 class=" pt-1 text-white ">Signup with email to stay updated</h6>
+            <div class="d-flex pt-3">
+            <form>
+                <input type="email" placeholder="Enter Your Email" style=" background-color: #313131; width: 300px;" class="h-100 text-white border border-white  rounded-pill ">
+            </form>
+            <button type="button" class="btn  rounded-pill  w-25 " style="background-color: #d5fe00;">Subscribe</button>
+            </div>
+        </div>
+
+
+
+
+
+</div>
+
+</div>
+</div>
+
+
+<div class="container-fluid" style="background-color: #4c4c4c;">
+
+    <footer class="py-3 text-center text-white">© 2025 Special Technology Zones Authority, All rights reserved.</footer>
+
+</div>
+
+</footer>
+
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+document.querySelectorAll('.left-in, .right-in, .bottm-in , .top-in , .zoom-in')
+  .forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
