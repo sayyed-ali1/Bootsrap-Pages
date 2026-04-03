@@ -2,13 +2,13 @@
 
 ## 🔗 Live Demo
 
-🌐 https://sayyed-ali1.github.io/Filters-Page/
+🌐 https://sayyed-ali1.github.io/Bootsrap-Pages/
 
 ---
 
 ## 📝 Project Overview
 
-In this project i have a fully functional and responsive filter page and also i have add a category filter as well in my this practice project through javascript.
+In this project i have made stza gov site design throuhg bootstrap it is completely made by bootstrap all pages, and addes some css for styling.
 ---
 
 ## 🛠 Technologies Used
